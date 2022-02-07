@@ -1,0 +1,6 @@
+name: Vectorcraftproject
+version: '${project.version}'
+main: me.pettersins.vectorcraftproject.Vectorcraftproject
+api-version: 1.17
+authors: [ Pettersins ]
+description: Vectorcraft Project for Essentials
