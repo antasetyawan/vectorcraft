@@ -4,7 +4,7 @@ import me.pettersins.vectorcraftproject.Vectorcraftproject;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.command.ConsoleCommandSender;
+import org.bukkit.entity.Player;
 
 public class maincommand implements CommandExecutor {
 
@@ -12,17 +12,21 @@ public class maincommand implements CommandExecutor {
 
     public maincommand(Vectorcraftproject plugin){
         this.plugin = plugin;
-        plugin.getCommand("WOW").setExecutor(this);
+        plugin.getCommand("project").setExecutor(this);
     }
 
     @Override
     public boolean onCommand(CommandSender sender,Command command, String label, String[] args) {
-        if(!(sender instanceof ConsoleCommandSender)){
+        if(!(sender instanceof Player)){
             sender.sendMessage("only Console can execute the commands!");
             return true;
         }
-        ConsoleCommandSender c = (ConsoleCommandSender) sender;
-
+        Player c = (Player) sender;
+        if (c.hasPermission("pettersins.use")){
+            c.sendMessage("hi!");
+        } else {
+            c.sendMessage("you dont have permission");
+        }
 
 
 
