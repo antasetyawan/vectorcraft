@@ -3,4 +3,9 @@ version: '${project.version}'
 main: me.pettersins.vectorcraftproject.Vectorcraftproject
 api-version: 1.17
 authors: [ Pettersins ]
-description: Vectorcraft Project for Essentials
+description: Copyright Vectorcraft Project
+
+commands:
+  project:
+    aliases: [vector]
+    description: This test Command for projection
