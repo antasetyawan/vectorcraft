@@ -7,6 +7,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.Bukkit;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
+import me.pettersins.vectorcraftproject.kelengkapan.textchat;
 
 public class joinleaves implements Listener {
 
@@ -21,7 +22,7 @@ public class joinleaves implements Listener {
         Player p = c.getPlayer();
 
         if (!p.hasPlayedBefore()) {
-            Bukkit.broadcastMessage(plugin.getConfig().getString("firstjoin").replace("<player>", p.getName()));
+            Bukkit.broadcastMessage(textchat.chat(plugin.getConfig().getString("firstjoin").replace("<player>", p.getName())));
         }
         else {
             Bukkit.broadcastMessage(plugin.getConfig().getString("firstjoin").replace("<player>", p.getName()));
