@@ -1,0 +1,11 @@
+name: Vectorcraftproject
+version: '1.0-SNAPSHOT'
+main: me.pettersins.vectorcraftproject.Vectorcraftproject
+api-version: 1.17
+authors: [ Pettersins ]
+description: Copyright Vectorcraft Project
+
+commands:
+  project:
+    aliases: [vector]
+    description: This test Command for projection
