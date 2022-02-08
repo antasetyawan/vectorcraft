@@ -7,4 +7,5 @@ public class textchat {
         return ChatColor.translateAlternateColorCodes('&', s);
 
     }
+
 }
